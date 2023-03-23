@@ -12,16 +12,10 @@
     <title>CinéFLIX</title>
 </head>
 
-<body class="bg-[#1e293b] overflow-x-hidden">
-    <nav class="flex items-center justify-between pr-2 bg-[#1e293b] drop-shadow-xl">
-        <img class="h-24 " src="/assets/images/logo.png" alt="logo cineflix" />
-        <ul class="inline-flex space-x-10 font-bold text-2xl text-[#c397ef]">
-            <li><a href="#">ACCUEIL</a></li>
-            <li><a href="#">CATALOGUE</a></li>
-            <li><a href="#">CONTACT</a></li>
-            <li><a href="#">CONNEXION</a></li>
-        </ul>
-    </nav>
+<body class="bg-[#1e293b] ">
+
+    <?php include ('content/include/navbar.php') ?>
+
     <header id="header" class="marging padding">
         <div class="slider">
             <img src="./assets/images/slider.png" alt="img1" class="img__slider active" />
@@ -74,10 +68,12 @@
              
         </div>
     </section>
-    <footer class="flex bg-[#9400D3] items-center justify-center gap-5">
-        <img class="h-24" src="./assets/images/logo.png" alt="">
-        <p>Copyright Made with Love by Fadila</p>
-    </footer>
+    <section id="quality" class="flex justify-center my-[60px]">       
+        <img class="h-full w-full" src="./assets/images/a.svg" alt="">
+        <img class="h-full w-full" src="./assets/images/2.svg" alt="">
+        <img class="h-full w-full" src="./assets/images/3.svg" alt="">
+    </section>
+    <?php include ('content/include/footer.php') ?>
     <script>
         let img__slider = document.getElementsByClassName('img__slider');
 
