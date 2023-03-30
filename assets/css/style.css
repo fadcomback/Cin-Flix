@@ -1,80 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 /*****************  HEADER  ***********************/
-.slider {
-    display: block;
-    margin: auto;
-    height: 200px;
+div.dummy {
+    min-height: 100vh;
+    color: black;
+  }
+  #header-container {
     position: relative;
-}
-
-.slider img {
-    height: 100%;
+    top: 0;
+    bottom: 0;
     width: 100%;
+    height: 60vh;
+    overflow: hidden;
+  }
+  #header-container video,
+  #header-fallback {
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  #header-video-container:after {
+    content: "";
+    background-image: url(../media/img/video-overlay-dot-large.png);
+    background-size: 3px 3px;
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0;
-    transition: opacity .5s;
-}
-
-.slider img.active {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  #play-pause {
+    color: white;
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    opacity: 0.5;
+    transition: 0.6s all;
+  }
+  #play-pause:hover {
     opacity: 1;
+  }
+  a#play-pause {
+    line-height: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+  }
+  #header-text {
+    position: relative;
+    top: 50%;
+    left: 0;
+    margin-right: 100px;
+    margin-left: 10%;
+    z-index: 200;
+  }
+  #header-logo {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+  }
+  /***************connexion*************************/
+  
+  *{
+      margin: 0;
+      padding: 0;
+      font-family: 'poppins',sans-serif;
+  }
+  .logo{
+      height: 100px;
+      margin-bottom: 20px;
+  }
+  section{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      width: 100%;
+      background: blur(15px);
+      background-position: center;
+      background-size: cover;
+  }
+  .form-box{
+      position: relative;
+      width: 400px;
+      height: 450px;
+      background: #a6a6a661 ;
+      border: 2px solid rgba(255,255,255,0.5);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  
+  }
+  h2{
+      font-size: 2em;
+      color: #fff;
+      text-align: center;
+  }
+  .inputbox{
+      position: relative;
+      margin: 30px 0;
+      width: 310px;
+      border-bottom: 2px solid #fff;
+  }
+  .inputbox label{
+      position: absolute;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      color: #fff;
+      font-size: 1em;
+      pointer-events: none;
+      transition: .5s;
+  }
+  input:focus ~ label,
+  input:valid ~ label{
+  top: -5px;
+  }
+  .inputbox input {
+      width: 100%;
+      height: 50px;
+      background: transparent;
+      border: none;
+      outline: none;
+      font-size: 1em;
+      padding:0 35px 0 5px;
+      color: #fff;
+  }
+  .inputbox ion-icon{
+      position: absolute;
+      right: 8px;
+      color: #fff;
+      font-size: 1.2em;
+      top: 20px;
+  }
+  .forget{
+      margin: -15px 0 15px ;
+      font-size: .9em;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;  
+  }
+  
+  .forget label input{
+      margin-right: 3px;
+      
+  }
+  .forget label a{
+      color: #fff;
+      text-decoration: none;
+  }
+  .forget label a:hover{
+      text-decoration: underline;
+  }
+  button{
+      width: 100%;
+      height: 40px;
+      border-radius: 40px;
+      background: #fff;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      font-size: 1em;
+      font-weight: 600;
+  }
+  .register{
+      font-size: .9em;
+      color: #fff;
+      text-align: center;
+      margin: 25px 0 10px;
+  }
+  .register p a{
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+  }
+  .register p a:hover{
+      text-decoration: underline;
+  }
+/*************************   inscription   ************************************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
 }
+.logo{
+    height: 100px;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url(./inscription.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 450px;
+    height: 600px;
+    background: #a6a6a661;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
 
-.suivant, .precedent {
-    color: rgba(153, 153, 153, 0.931);
-    font-size: 2rem;
+}
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+.inputbox label{
     position: absolute;
     top: 50%;
+    left: 5px;
     transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+.forget label a:hover{
+    text-decoration: underline;
+}
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
     cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+.register p a:hover{
+    text-decoration: underline;
+}
+.msg-inscription{
+    margin-top: 10px;
 }
 
-.suivant {
-    right: 1rem;
-}
-
-.precedent {
-    left: 1rem;
-}
 @media screen and (min-width: 768px) {
-    .slider {
-        display: block;
-        margin: auto;
-        height: 650px;
-        position: relative;
-    }
+    #header-logo {
+        max-width: 100px;
+      }
+      #header-text {
+        top: 40%;
+      }
     
-    .slider img {
-        height: 100%;
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity .5s;
-    }
-    
-    .slider img.active {
-        opacity: 1;
-    }
-    
-    .suivant, .precedent {
-        color: rgba(153, 153, 153, 0.931);
-        font-size: 2rem;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        cursor: pointer;
-    }
-    
-    .suivant {
-        right: 1rem;
-    }
-    
-    .precedent {
-        left: 1rem;
-    }
-
     /***************top offices*****************/
     body {
         width: 100vw;
